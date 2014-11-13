@@ -49,9 +49,15 @@ var boxStyle = {
 };
 
 var Box = React.createClass({displayName: 'Box',
+  handleClick: function(){
+    this.props.handleClick(this.props.rowIndex);
+  },
   render: function(){
     return (
-      React.createElement("button", {style: boxStyle}, 
+      React.createElement("button", {
+        style: boxStyle, 
+        onClick: this.handleClick
+      }, 
         this.props.value
       )
     );
@@ -59,19 +65,16 @@ var Box = React.createClass({displayName: 'Box',
 });
 
 var Row = React.createClass({displayName: 'Row',
-  getInitialState: function(){
-    return {
-      clicks: 0,
-      rowValues: ['-', '-', '-'] 
-    };
+  handleClick: function(rowIndex){
+    this.props.handleClick(this.props.boardIndex, rowIndex);
   },
   render: function(){
     var _this = this;
-    var boxes = this.state.rowValues.map(function(value, index){
+    var boxes = this.props.rowValues.map(function(value, index){
       return (
-        React.createElement(Box, {value: value, key: index, rowIndex: index})
+        React.createElement(Box, {value: value, key: index, rowIndex: index, handleClick: this.handleClick})
       );
-    });
+    }.bind(this));
     return (
       React.createElement("div", null, 
         boxes
@@ -80,8 +83,45 @@ var Row = React.createClass({displayName: 'Row',
   }
 });
 
+var Board = React.createClass({displayName: 'Board',
+  getInitialState: function(){
+    return {
+      clicks: 0,
+      boardValues: [
+        ['-', '-', '-'],
+        ['-', '-', '-'],
+        ['-', '-', '-']
+      ]
+    };
+  },
+  handleClick: function(boardIndex, rowIndex){
+    var boardValues = this.state.boardValues;
+    var newValue = 'X';
+    if(this.state.clicks % 2 === 0){
+      newValue = 'O';
+    }
+    boardValues[boardIndex][rowIndex] = newValue;
+    this.setState({
+      clicks: this.state.clicks + 1,
+      boardValues: this.state.boardValues
+    });
+  },
+  render: function(){
+    var rows = this.state.boardValues.map(function(row, index){
+      return (
+        React.createElement(Row, {key: index, rowValues: row, boardIndex: index, handleClick: this.handleClick})
+      )
+    }.bind(this));
+    return (
+      React.createElement("div", null, 
+        rows
+      )
+    );
+  }
+});
 
-React.render(React.createElement(Row, null), document.body);
+
+React.render(React.createElement(Board, null), document.body);
 },{"react":148}],2:[function(require,module,exports){
 // shim for using process in browser
 
