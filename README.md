@@ -29,7 +29,7 @@ gulp
 
 1. Give Box a property that dictates what text it renders, render an 'X'
 
-1. Give Box some style! Make it a div with 
+1. Give Box some style! Make it a div with height 100px and width 100px 
 
 1. Have Box render text based on its state.
 
@@ -56,3 +56,10 @@ gulp
 
 1. Rig up event handling so clicks on Box's bubble up to the Board itself.
 
+
+###Todos:
+
+1. Clean up gulpfile so that it reports informative errors
+  1. This may require using browserify with gulp-shell instead of with gulp-react
+1. Add comments to solution code, so user can understand why choices were made
+1. Add more steps with fluxJS
