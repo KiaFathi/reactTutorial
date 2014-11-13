@@ -3,7 +3,44 @@
 
 var React = require('react');
 
+var boxStyle = {
+  width: '100px',
+  height: '100px'
+};
 
+var Box = React.createClass({displayName: 'Box',
+  getInitialState: function(){
+    return {
+      value: 'X'
+    };
+  },
+  handleClick: function(){
+    var oldValue = this.state.value;
+    var newValue= oldValue === 'X' ? 'O': 'X';
+    this.setState({
+      value: newValue
+    });
+  },
+  render: function(){
+    return (
+      React.createElement("button", {style: boxStyle, onClick: this.handleClick}, this.state.value)
+    );
+  }
+});
+
+var Row = React.createClass({displayName: 'Row',
+  render: function(){
+    return (
+      React.createElement("div", null, 
+        React.createElement(Box, null), 
+        React.createElement(Box, null), 
+        React.createElement(Box, null)
+      )
+    )
+  }
+})
+
+React.render(React.createElement(Row, null), document.body)
 },{"react":148}],2:[function(require,module,exports){
 // shim for using process in browser
 
