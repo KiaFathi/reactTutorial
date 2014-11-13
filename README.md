@@ -50,3 +50,9 @@ gulp
 1. Rig up the event handling so that clicks on a Box component change the 
   state on their parent Row component.
 
+1. Now create a Board component that renders three Row components.
+
+1. Pull the state out of the Row components and into the Board component.
+
+1. Rig up event handling so clicks on Box's bubble up to the Board itself.
+
