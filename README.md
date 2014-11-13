@@ -16,7 +16,7 @@ gulp
 ```
 1. Open up localhost:8080 in your browser of choice.
 
-1. Follow the steps below to build Tic Tac Toe!
+1. Follow the steps below to build Tic Tac Toe in the file 'src/app.jsx'
 
 1. Your changes to app.jsx will auto reload your browser.
 
