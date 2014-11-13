@@ -1,13 +1,11 @@
 'use strict';
 
-var React = require('react');
-
 /* Goal: Build a tic tac toe game!
   
   Note: If at any point you get stuck, look to steps directory for guidance
 
   Steps:
-    1. Build a react component called Box, render that component to the page
+    1. Build a react component called Box, render that component to the page.
 
     2. Give Box a property that dictates what text it renders, render an 'X'
 
@@ -18,6 +16,7 @@ var React = require('react');
     5. Have Box's state change every 300ms, alternating between 'X' and 'O'.
       a. Where should this be written?
       a. This is a good moment to learn about the component cycle!
+      a. Make sure to clear you interval!
 
     6. Have Box's state change based on clicks. Set inital state to '-'.
       a. How do we set up an event handler for React components?
@@ -34,13 +33,46 @@ var React = require('react');
 
 */
 
+var React = require('react');
+
+var boxStyle = {
+  height: '100px',
+  width: '100px'
+};
+
 var Box = React.createClass({
+  getInitialState: function(){
+    return {
+      value: 'X'
+    }
+  },
+  handleClick: function(){
+    var oldValue = this.state.value;
+    var newValue = oldValue === 'X' ? 'O': 'X';
+    this.setState({
+      value: newValue
+    });
+  },
   render: function(){
     return (
-      <div>X</div>
-    )
+      <button style={boxStyle} onClick={this.handleClick}>
+        {this.state.value}
+      </button>
+    );
+  }
+});
+
+var Row = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <Box/>
+        <Box/>
+        <Box/>
+      </div>
+    );
   }
 });
 
 
-React.render(<Box/>, document.body);
+React.render(<Row/>, document.body);

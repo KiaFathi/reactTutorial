@@ -1,14 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-var React = require('react');
-
 /* Goal: Build a tic tac toe game!
   
   Note: If at any point you get stuck, look to steps directory for guidance
 
   Steps:
-    1. Build a react component called Box, render that component to the page
+    1. Build a react component called Box, render that component to the page.
 
     2. Give Box a property that dictates what text it renders, render an 'X'
 
@@ -19,6 +17,7 @@ var React = require('react');
     5. Have Box's state change every 300ms, alternating between 'X' and 'O'.
       a. Where should this be written?
       a. This is a good moment to learn about the component cycle!
+      a. Make sure to clear you interval!
 
     6. Have Box's state change based on clicks. Set inital state to '-'.
       a. How do we set up an event handler for React components?
@@ -35,16 +34,49 @@ var React = require('react');
 
 */
 
+var React = require('react');
+
+var boxStyle = {
+  height: '100px',
+  width: '100px'
+};
+
 var Box = React.createClass({displayName: 'Box',
+  getInitialState: function(){
+    return {
+      value: 'X'
+    }
+  },
+  handleClick: function(){
+    var oldValue = this.state.value;
+    var newValue = oldValue === 'X' ? 'O': 'X';
+    this.setState({
+      value: newValue
+    });
+  },
   render: function(){
     return (
-      React.createElement("div", null, "X")
-    )
+      React.createElement("button", {style: boxStyle, onClick: this.handleClick}, 
+        this.state.value
+      )
+    );
+  }
+});
+
+var Row = React.createClass({displayName: 'Row',
+  render: function(){
+    return (
+      React.createElement("div", null, 
+        React.createElement(Box, null), 
+        React.createElement(Box, null), 
+        React.createElement(Box, null)
+      )
+    );
   }
 });
 
 
-React.render(React.createElement(Box, null), document.body);
+React.render(React.createElement(Row, null), document.body);
 },{"react":148}],2:[function(require,module,exports){
 // shim for using process in browser
 
