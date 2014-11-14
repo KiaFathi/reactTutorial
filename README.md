@@ -33,7 +33,7 @@ Note: If you get stuck, you can look to the 'steps' directory to see solutions!
 
 1. Give Box a property that dictates what text it renders, render an 'X'
 
-1. Give Box some style! Make it a div with height 100px and width 100px
+1. Give Box some style! Make it a button with height 100px and width 100px
 1. Have Box render text based on its state.
 
 1. Have Box's state change every 300ms, alternating between 'X' and 'O'.
