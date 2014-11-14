@@ -6,6 +6,8 @@ An Intro Tutorial on ReactJS, focused on building a Tic Tac Toe game.
 ### Getting Started:
 
 1. Clone the repository
+1. If you don't have nodeJS installed on your computer, you can install it here:
+<a href='http://nodejs.org/'>nodeJS</a>
 1. From the main directory, install the necessary npm packages:
 ```
 npm install
