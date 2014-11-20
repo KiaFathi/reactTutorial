@@ -23,7 +23,6 @@ var Row = React.createClass({
     };
   },
   render: function(){
-    var _this = this;
     var boxes = this.state.rowValues.map(function(value, index){
       return (
         <Box value={value} key={index} rowIndex={index} />
