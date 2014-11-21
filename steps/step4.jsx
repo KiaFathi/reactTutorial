@@ -13,7 +13,7 @@ var Box = React.createClass({
   },
   render: function(){
     return (
-      <button style={this.props.style}>{this.state.value}</button>
+      <button style={boxStyle}>{this.state.value}</button>
     )
   }
 });
