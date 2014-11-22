@@ -16,13 +16,13 @@ npm install
 ```
 gulp
 ```
-1. Open up localhost:8080 in your browser of choice.
+1. Open up index.html in your browser of choice.
 
 1. Follow the steps below to build Tic Tac Toe in the file 'src/app.jsx'
 
-1. Your changes to app.jsx will auto reload your browser.
+1. Your changes to app.jsx will auto rebuild your application.
 
-1. If auto-reload stops, check your gulp task in your terminal to see what is causing an error.
+1. Reload your browser to see changes.
 
 
 ### Steps:
