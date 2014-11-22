@@ -27,7 +27,7 @@ gulp
 
 ### Steps:
 
-Note: If you get stuck, you can look to the 'steps' directory to see solutions! Or look at the docss here:
+Note: If you get stuck, you can look to the 'steps' directory to see solutions! Or look at the docs here:
 <a href='http://facebook.github.io/react/docs/getting-started.html'> ReactJS Documentation </a>
 
 1. Build a react component called Box, render that component to the page
