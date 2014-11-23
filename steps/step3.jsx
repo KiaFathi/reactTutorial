@@ -14,4 +14,4 @@ var Box = React.createClass({
 });
 
 
-React.render(<Box/>, document.body);
+React.render(<Box value='X'/>, document.body);
