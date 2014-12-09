@@ -42,7 +42,7 @@ Note: If you get stuck, you can look to the 'steps' directory to see solutions! 
   1. This is a good moment to learn about the component cycle!
   1. Make sure to clear your interval!
 
-1. Have Box's state change based on clicks. Set inital state to '-'.
+1. Have Box's state change based on clicks. Set initial state to '-'.
   1. How do we set up an event handler for React components?
   1. Make Box alternate between 'X' and 'O' on clicks.
 
