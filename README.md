@@ -1,7 +1,7 @@
 reactTutorial
 =============
 
-An Intro Tutorial on ReactJS, focused on building a Tic Tac Toe game.
+An intro tutorial on ReactJS, focused on building a Tic Tac Toe game.
 
 ### Getting Started:
 
