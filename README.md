@@ -16,7 +16,7 @@ npm install
 ```
 gulp
 ```
-1. Open up index.html in your browser of choice.
+1. Open index.html in your browser of choice.
 
 1. Follow the steps below to build Tic Tac Toe in the file 'src/app.jsx'
 
