@@ -5,7 +5,7 @@ An intro tutorial on ReactJS, focused on building a Tic Tac Toe game.
 
 ### Getting Started:
 
-1. Clone the repository
+1. Clone the repository.
 1. If you don't have nodeJS installed on your computer, you can install it here:
 <a href='http://nodejs.org/'>nodeJS</a>
 1. From the main directory, install the necessary npm packages:
@@ -30,11 +30,11 @@ gulp
 Note: If you get stuck, you can look to the 'steps' directory to see solutions! Or look at the docs here:
 <a href='http://facebook.github.io/react/docs/getting-started.html'> ReactJS Documentation </a>
 
-1. Build a react component called Box, render that component to the page
+1. Build a react component called Box, render that component to the page.
 
-1. Give Box a property that dictates what text it renders, render an 'X'
+1. Give Box a property that dictates what text it renders, render an 'X'.
 
-1. Give Box some style! Make it a button with height 100px and width 100px
+1. Give Box some style! Make it a button with height 100px and width 100px.
 1. Have Box render text based on its state.
 
 1. Have Box's state change every 300ms, alternating between 'X' and 'O'.
@@ -63,7 +63,7 @@ Note: If you get stuck, you can look to the 'steps' directory to see solutions! 
 
 ###Todos:
 
-1. Clean up gulpfile so that it reports informative errors
-  1. This may require using browserify with gulp-shell instead of with gulp-react
-1. Add comments to solution code, so user can understand why choices were made
+1. Clean up gulpfile so that it reports informative errors.
+  1. This may require using browserify with gulp-shell instead of with gulp-react.
+1. Add comments to solution code, so user can understand why choices were made.
 1. Add more steps with fluxJS
