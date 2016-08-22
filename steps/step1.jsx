@@ -1,4 +1,5 @@
 'use strict';
+var React = require('react');
 
 var Box = React.createClass({
   render: function(){
